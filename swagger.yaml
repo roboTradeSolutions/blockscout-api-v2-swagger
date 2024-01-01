@@ -281,7 +281,7 @@ paths:
           name: type
           schema:
             type: string
-            example: "8BIT-20,8BIT-721,8BIT-1155" # to return all token types you can just drop `type` from url
+            example: "BIT-20,BIT-721,BIT-1155" # to return all token types you can just drop `type` from url
       responses:
         "200":
           description: token transfers
@@ -612,7 +612,7 @@ paths:
           name: type
           schema:
             type: string
-            example: "8BIT-20,8BIT-721,8BIT-1155" # to return all token types you can just drop `type` from url
+            example: "BIT-20,BIT-721,BIT-1155" # to return all token types you can just drop `type` from url
         - in: query
           name: filter
           schema:
@@ -769,7 +769,7 @@ paths:
           name: type
           schema:
             type: string
-            example: "8BIT-20,8BIT-721,8BIT-1155" # to return all token types you can just drop `type` from url
+            example: "BIT-20,BIT-721,BIT-1155" # to return all token types you can just drop `type` from url
       responses:
         "200":
           description: address
@@ -791,7 +791,7 @@ paths:
                       {
                         "items_count": 50,
                         "token_name": null,
-                        "token_type": "8BIT-1155",
+                        "token_type": "BIT-1155",
                         "value": 14,
                       }
         "400":
@@ -882,7 +882,7 @@ paths:
           name: type
           schema:
             type: string
-            example: "8BIT-20,8BIT-721,8BIT-1155" # to return all token types you can just drop `type` from url
+            example: "BIT-20,BIT-721,BIT-1155" # to return all token types you can just drop `type` from url
       responses:
         "200":
           description: token
@@ -1575,10 +1575,10 @@ components:
           $ref: "#/components/schemas/TokenInfo"
         total:
           oneOf:
-            - $ref: "#/components/schemas/Total8BIT20"
-            - $ref: "#/components/schemas/Total8BIT721"
-            - $ref: "#/components/schemas/Total8BIT1155"
-            - $ref: "#/components/schemas/Total8BIT1155Batch"
+            - $ref: "#/components/schemas/TotalBIT20"
+            - $ref: "#/components/schemas/TotalBIT721"
+            - $ref: "#/components/schemas/TotalBIT1155"
+            - $ref: "#/components/schemas/TotalBIT1155Batch"
         tx_hash:
           type: string
           example: "0x6662ad1ad2ea899e9e27832dc202fd2ef915a5d2816c1142e6933cff93f7c592"
@@ -2413,7 +2413,7 @@ components:
           example: "0x394c399dbA25B99Ab7708EdB505d755B3aa29997"
         type:
           type: string
-          example: "8BIT-20"
+          example: "BIT-20"
         holders:
           type: integer
           example: 837494234523
@@ -2424,7 +2424,7 @@ components:
           type: string
           example: "10000000"
 
-    Total8BIT20:
+    TotalBIT20:
       required:
         - decimals
         - value
@@ -2436,7 +2436,7 @@ components:
           type: string
           example: "1000"
 
-    Total8BIT721:
+    TotalBIT721:
       required:
         - token_id
       properties:
@@ -2444,7 +2444,7 @@ components:
           type: string
           example: "1"
 
-    Total8BIT1155:
+    TotalBIT1155:
       required:
         - token_id
         - decimals
@@ -2460,10 +2460,10 @@ components:
           type: string
           example: "1000"
 
-    Total8BIT1155Batch:
+    TotalBIT1155Batch:
       type: array
       items:
-        $ref: "#/components/schemas/Total8BIT1155"
+        $ref: "#/components/schemas/TotalBIT1155"
 
     Holder:
       required:
@@ -2598,7 +2598,7 @@ components:
             {
               "compilationTarget":
                 {
-                  "@openzeppelin/contracts/proxy/8BIT1967/8BIT1967Proxy.sol": "8BIT1967Proxy",
+                  "@openzeppelin/contracts/proxy/BIT1967/BIT1967Proxy.sol": "BIT1967Proxy",
                 },
               "evmVersion": "london",
               "libraries": {},
@@ -2647,7 +2647,7 @@ components:
       properties:
         file_path:
           type: string
-          example: "contracts/8BIT-20.sol"
+          example: "contracts/BIT-20.sol"
         source_code:
           type: string
           example: 'pragma solidity ^0.8.0; \n contract A {}'
@@ -2686,7 +2686,7 @@ components:
           example: "83606435600.3635"
         icon_url:
           type: string
-          example: "https://raw.githubus8BITontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+          example: "https://raw.githubusBITontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
         name:
           type: string
           example: "Tether USD"
@@ -2701,7 +2701,7 @@ components:
           example: "0x394c399dbA25B99Ab7708EdB505d755B3aa29997"
         type:
           type: string
-          example: "8BIT-20"
+          example: "BIT-20"
         holders:
           type: string
           example: "837494234523"
@@ -2775,7 +2775,7 @@ components:
           example: "USDT"
         token_type:
           type: string
-          example: "8BIT-20"
+          example: "BIT-20"
         token_url:
           type: string
           example: "/token/0xdAC17F958D2ee523a2206206994597C13D831ec7"
@@ -3055,9 +3055,9 @@ components:
         change:
           oneOf:
             - $ref: "#/components/schemas/NFTChangesArray"
-            - $ref: "#/components/schemas/8BIT20Or1155OrCoinChange"
+            - $ref: "#/components/schemas/BIT20Or1155OrCoinChange"
 
-    8BIT20Or1155OrCoinChange:
+    BIT20Or1155OrCoinChange:
       type: string
       example: "-10000000"
 
@@ -3075,7 +3075,7 @@ components:
           type: string
           example: "from | to"
         total:
-          $ref: "#/components/schemas/Total8BIT721"
+          $ref: "#/components/schemas/TotalBIT721"
 
     SmartContractForList:
       required:
@@ -3295,7 +3295,7 @@ components:
               name: "Tether USD"
               symbol: "USDT"
               total_supply: "39030615894320966"
-              type: "8BIT-20"
+              type: "BIT-20"
             total:
               decimals: "6"
               value: "830000000"
@@ -3343,7 +3343,7 @@ components:
               name: "Tether USD"
               symbol: "USDT"
               total_supply: "39030615894320966"
-              type: "8BIT-20"
+              type: "BIT-20"
             total:
               decimals: "6"
               value: "830000000"
@@ -3385,7 +3385,7 @@ components:
               name: "Tether USD"
               symbol: "USDT"
               total_supply: "39030615894320966"
-              type: "8BIT-20"
+              type: "BIT-20"
             total:
               decimals: "6"
               value: "830000000"
