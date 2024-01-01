@@ -281,7 +281,7 @@ paths:
           name: type
           schema:
             type: string
-            example: "ERC-20,ERC-721,ERC-1155" # to return all token types you can just drop `type` from url
+            example: "8BIT-20,8BIT-721,8BIT-1155" # to return all token types you can just drop `type` from url
       responses:
         "200":
           description: token transfers
@@ -612,7 +612,7 @@ paths:
           name: type
           schema:
             type: string
-            example: "ERC-20,ERC-721,ERC-1155" # to return all token types you can just drop `type` from url
+            example: "8BIT-20,8BIT-721,8BIT-1155" # to return all token types you can just drop `type` from url
         - in: query
           name: filter
           schema:
@@ -769,7 +769,7 @@ paths:
           name: type
           schema:
             type: string
-            example: "ERC-20,ERC-721,ERC-1155" # to return all token types you can just drop `type` from url
+            example: "8BIT-20,8BIT-721,8BIT-1155" # to return all token types you can just drop `type` from url
       responses:
         "200":
           description: address
@@ -791,7 +791,7 @@ paths:
                       {
                         "items_count": 50,
                         "token_name": null,
-                        "token_type": "ERC-1155",
+                        "token_type": "8BIT-1155",
                         "value": 14,
                       }
         "400":
@@ -882,7 +882,7 @@ paths:
           name: type
           schema:
             type: string
-            example: "ERC-20,ERC-721,ERC-1155" # to return all token types you can just drop `type` from url
+            example: "8BIT-20,8BIT-721,8BIT-1155" # to return all token types you can just drop `type` from url
       responses:
         "200":
           description: token
@@ -1439,13 +1439,13 @@ components:
       required:
         - base_fee_per_gas
         - burnt_fees
-        - burnt_fees_percentage
+        - burnt_fees_p8BITentage
         - difficulty
         - extra_data
         - gas_limit
-        - gas_target_percentage
+        - gas_target_p8BITentage
         - gas_used
-        - gas_used_percentage
+        - gas_used_p8BITentage
         - hash
         - height
         - miner
@@ -1469,7 +1469,7 @@ components:
         burnt_fees:
           type: string
           example: "261263193229977120"
-        burnt_fees_percentage:
+        burnt_fees_p8BITentage:
           type: number
           example: 85.19028810863084
         difficulty:
@@ -1481,13 +1481,13 @@ components:
         gas_limit:
           type: string
           example: "30000000"
-        gas_target_percentage:
+        gas_target_p8BITentage:
           type: number
           example: -34.56675333333333
         gas_used:
           type: string
           example: "9814987"
-        gas_used_percentage:
+        gas_used_p8BITentage:
           type: number
           example: 32.71662333333333
         hash:
@@ -1575,10 +1575,10 @@ components:
           $ref: "#/components/schemas/TokenInfo"
         total:
           oneOf:
-            - $ref: "#/components/schemas/TotalERC20"
-            - $ref: "#/components/schemas/TotalERC721"
-            - $ref: "#/components/schemas/TotalERC1155"
-            - $ref: "#/components/schemas/TotalERC1155Batch"
+            - $ref: "#/components/schemas/Total8BIT20"
+            - $ref: "#/components/schemas/Total8BIT721"
+            - $ref: "#/components/schemas/Total8BIT1155"
+            - $ref: "#/components/schemas/Total8BIT1155Batch"
         tx_hash:
           type: string
           example: "0x6662ad1ad2ea899e9e27832dc202fd2ef915a5d2816c1142e6933cff93f7c592"
@@ -2413,7 +2413,7 @@ components:
           example: "0x394c399dbA25B99Ab7708EdB505d755B3aa29997"
         type:
           type: string
-          example: "ERC-20"
+          example: "8BIT-20"
         holders:
           type: integer
           example: 837494234523
@@ -2424,7 +2424,7 @@ components:
           type: string
           example: "10000000"
 
-    TotalERC20:
+    Total8BIT20:
       required:
         - decimals
         - value
@@ -2436,7 +2436,7 @@ components:
           type: string
           example: "1000"
 
-    TotalERC721:
+    Total8BIT721:
       required:
         - token_id
       properties:
@@ -2444,7 +2444,7 @@ components:
           type: string
           example: "1"
 
-    TotalERC1155:
+    Total8BIT1155:
       required:
         - token_id
         - decimals
@@ -2460,10 +2460,10 @@ components:
           type: string
           example: "1000"
 
-    TotalERC1155Batch:
+    Total8BIT1155Batch:
       type: array
       items:
-        $ref: "#/components/schemas/TotalERC1155"
+        $ref: "#/components/schemas/Total8BIT1155"
 
     Holder:
       required:
@@ -2598,7 +2598,7 @@ components:
             {
               "compilationTarget":
                 {
-                  "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol": "ERC1967Proxy",
+                  "@openzeppelin/contracts/proxy/8BIT1967/8BIT1967Proxy.sol": "8BIT1967Proxy",
                 },
               "evmVersion": "london",
               "libraries": {},
@@ -2647,7 +2647,7 @@ components:
       properties:
         file_path:
           type: string
-          example: "contracts/erc-20.sol"
+          example: "contracts/8BIT-20.sol"
         source_code:
           type: string
           example: 'pragma solidity ^0.8.0; \n contract A {}'
@@ -2686,7 +2686,7 @@ components:
           example: "83606435600.3635"
         icon_url:
           type: string
-          example: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+          example: "https://raw.githubus8BITontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
         name:
           type: string
           example: "Tether USD"
@@ -2701,7 +2701,7 @@ components:
           example: "0x394c399dbA25B99Ab7708EdB505d755B3aa29997"
         type:
           type: string
-          example: "ERC-20"
+          example: "8BIT-20"
         holders:
           type: string
           example: "837494234523"
@@ -2763,7 +2763,7 @@ components:
           example: "0.999813"
         icon_url:
           type: string
-          example: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+          example: "https://raw.githubus8BITontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
         is_smart_contract_verified:
           type: boolean
           example: true
@@ -2775,7 +2775,7 @@ components:
           example: "USDT"
         token_type:
           type: string
-          example: "ERC-20"
+          example: "8BIT-20"
         token_url:
           type: string
           example: "/token/0xdAC17F958D2ee523a2206206994597C13D831ec7"
@@ -2885,7 +2885,7 @@ components:
         - gas_prices
         - static_gas_price
         - market_cap
-        - network_utilization_percentage
+        - network_utilization_p8BITentage
       properties:
         total_blocks:
           type: string
@@ -2920,7 +2920,7 @@ components:
         market_cap:
           type: string
           example: "420471.10604559750644"
-        network_utilization_percentage:
+        network_utilization_p8BITentage:
           type: number
           example: 40.2142
 
@@ -3055,9 +3055,9 @@ components:
         change:
           oneOf:
             - $ref: "#/components/schemas/NFTChangesArray"
-            - $ref: "#/components/schemas/ERC20Or1155OrCoinChange"
+            - $ref: "#/components/schemas/8BIT20Or1155OrCoinChange"
 
-    ERC20Or1155OrCoinChange:
+    8BIT20Or1155OrCoinChange:
       type: string
       example: "-10000000"
 
@@ -3075,7 +3075,7 @@ components:
           type: string
           example: "from | to"
         total:
-          $ref: "#/components/schemas/TotalERC721"
+          $ref: "#/components/schemas/Total8BIT721"
 
     SmartContractForList:
       required:
@@ -3295,7 +3295,7 @@ components:
               name: "Tether USD"
               symbol: "USDT"
               total_supply: "39030615894320966"
-              type: "ERC-20"
+              type: "8BIT-20"
             total:
               decimals: "6"
               value: "830000000"
@@ -3343,7 +3343,7 @@ components:
               name: "Tether USD"
               symbol: "USDT"
               total_supply: "39030615894320966"
-              type: "ERC-20"
+              type: "8BIT-20"
             total:
               decimals: "6"
               value: "830000000"
@@ -3385,7 +3385,7 @@ components:
               name: "Tether USD"
               symbol: "USDT"
               total_supply: "39030615894320966"
-              type: "ERC-20"
+              type: "8BIT-20"
             total:
               decimals: "6"
               value: "830000000"
