@@ -1439,13 +1439,13 @@ components:
       required:
         - base_fee_per_gas
         - burnt_fees
-        - burnt_fees_p8BITentage
+        - burnt_fees_percentage
         - difficulty
         - extra_data
         - gas_limit
-        - gas_target_p8BITentage
+        - gas_target_percentage
         - gas_used
-        - gas_used_p8BITentage
+        - gas_used_percentage
         - hash
         - height
         - miner
@@ -1469,7 +1469,7 @@ components:
         burnt_fees:
           type: string
           example: "261263193229977120"
-        burnt_fees_p8BITentage:
+        burnt_fees_percentage:
           type: number
           example: 85.19028810863084
         difficulty:
@@ -1481,13 +1481,13 @@ components:
         gas_limit:
           type: string
           example: "30000000"
-        gas_target_p8BITentage:
+        gas_target_percentage:
           type: number
           example: -34.56675333333333
         gas_used:
           type: string
           example: "9814987"
-        gas_used_p8BITentage:
+        gas_used_percentage:
           type: number
           example: 32.71662333333333
         hash:
@@ -2763,7 +2763,7 @@ components:
           example: "0.999813"
         icon_url:
           type: string
-          example: "https://raw.githubus8BITontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+          example: "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
         is_smart_contract_verified:
           type: boolean
           example: true
@@ -2885,7 +2885,7 @@ components:
         - gas_prices
         - static_gas_price
         - market_cap
-        - network_utilization_p8BITentage
+        - network_utilization_percentage
       properties:
         total_blocks:
           type: string
@@ -2920,7 +2920,7 @@ components:
         market_cap:
           type: string
           example: "420471.10604559750644"
-        network_utilization_p8BITentage:
+        network_utilization_percentage:
           type: number
           example: 40.2142
 
